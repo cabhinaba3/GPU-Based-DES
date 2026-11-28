@@ -1,0 +1,16 @@
+[build-system]
+requires = ["scikit-build-core>=0.11", "nanobind>=2.9"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "tickdes"
+version = "0.0.1"
+description = "Tick-based parallel discrete-event simulation: typed Python models compiled to C++/CUDA"
+readme = "README.md"
+license = "GPL-2.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+
+[tool.scikit-build]
+minimum-version = "build-system.requires"
+wheel.packages = ["python/tickdes"]

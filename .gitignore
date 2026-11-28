@@ -4,3 +4,9 @@
 *.ptx
 *.cubin
 *.fatbin
+docs/
+.venv/
+build/
+dist/
+__pycache__/
+*.so

@@ -1,18 +1,21 @@
 # GPU-Based-DES
 
-A minimal GPU accelerated Discrete Event Simulation (DES) engine written in CUDA C++
+`tickdes` (working name) is a discrete-event simulation library. Models are written in typed Python and compiled to a C++ engine. CUDA and multi-GPU backends (MPI, NCCL) are planned.
 
-## Tools
-CUDA Toolkit >= 12.0
-CMake >= 3.25
-C++ Compiler C++17
-GPU >= Turing
+Status: early scaffolding. Nothing simulates yet.
 
 ## Building
+
+Needs Python 3.10 or later, CMake 3.25 or later, a C++17 compiler and [uv](https://docs.astral.sh/uv/).
+
 ```
-cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURE="86"
-cmake --build build -j$(nproc)
+uv sync
+uv run python -c "import tickdes"
 ```
+
+## Licence
+
+GPL-2.0-only. See `LICENSE`.
 
 ## Note:
 I do admit, I had to take help from LLM Models for certain implementations and GPU Libraries.
