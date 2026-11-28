@@ -14,3 +14,12 @@ requires-python = ">=3.10"
 [tool.scikit-build]
 minimum-version = "build-system.requires"
 wheel.packages = ["python/tickdes"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "clang-format>=19"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

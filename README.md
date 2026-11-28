@@ -13,6 +13,8 @@ uv sync
 uv run python -c "import tickdes"
 ```
 
+Run `scripts/check.sh` before every commit. It does a clean build with warnings as errors, runs ruff and clang-format, and runs the tests.
+
 ## Licence
 
 GPL-2.0-only. See `LICENSE`.
